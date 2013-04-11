@@ -11,15 +11,7 @@
 |
 */
 
-Route::resource('drill', 'DrillController');
-Route::resource('position', 'PositionController');
-Route::resource('session', 'SessionController');
-
 Route::get('/', function()
 {
-	return View::make('home', array('positions' => Position::all()->toArray() ));
-});
-
-Route::get('/ovning/{id}', function($id) {
-	return View::make('single', array('single_drill_id' => $id));
+	return View::make('hello');
 });
