@@ -1,0 +1,84 @@
+/*------------------------------------*\
+    _BASE.SCSS
+\*------------------------------------*/
+
+/**
+ * RESETS FOR INUIT.CSS
+ */
+
+.grid {
+	padding: 0 $side-padding;
+  letter-spacing: -0.31em; // Whitespace fix
+
+  &.l-full-width {
+		max-width: 100%;
+		padding: 0;
+
+		.grid__item:first-child {
+			padding-left: 0;
+		}
+	}
+
+	.grid__item, .fix-letters {
+		letter-spacing: normal;
+	}
+}
+
+
+/**
+ * IMPORTS
+ */
+
+/**
+ * BASE STYLES
+ */
+
+html {
+	background-color: $body_color;
+	-webkit-font-smoothing: antialiased;
+}
+
+body {
+	position: relative;
+	max-width: (2*$side-padding)+$grid-width;
+	margin: 1.5em auto;
+	background-color: $body_color;
+	color: #fff;
+	font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, li {
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Helvetica';
+	font-weight: 700;
+	text-rendering: optimizeLegibility;
+}
+
+a {
+	color: $yellow;
+	@include vendor(transition, all 0.2s ease-out);
+
+	&:hover {
+		color: $light_blue;
+	}
+
+	img {
+		outline: none;
+	}
+}
+
+i {
+	vertical-align: middle;
+}
+
+.alignright { text-align: right; }
+.alignleft { text-align: left; }
+.aligncenter { text-align: center; margin-left: auto; margin-right: auto; }
+.no-margin { margin: 0; }
+.italic { font-style: italic; }
+.uppercase { text-transform: uppercase; }
+.small { font-size: .9em; }
+.big-font { font-family: 'Black Ops One', Helvetica; text-transform: uppercase; letter-spacing: 3px; font-weight: 300; min-height: 30px; }

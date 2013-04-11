@@ -1,0 +1,28 @@
+//------------------------------------
+//    _NAVIGATION.SCSS
+//------------------------------------
+
+.filter-nav, .latest-nav {
+	list-style: none;
+	margin-left: 0;
+
+	li {
+		a {
+			font-size: .8em;
+
+			&.active {
+				font-weight: bold;
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+.tag-list {
+	.pill {
+		padding: .1em .7em;
+		font-size: .8em;
+		background-color: $dark_blue;
+		color: $yellow;
+	}
+}

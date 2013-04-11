@@ -1,0 +1,24 @@
+/*------------------------------------*\
+    _SEARCH.SCSS
+\*------------------------------------*/
+.searchform {
+	margin-top: 20px;
+	margin-top: 2rem;
+	width:100%;
+	text-align: right;
+
+  .text-input {
+    @include rems(padding, .6);
+    width: 100%;
+    border-radius: .5rem;
+    @include rems(font-size, 1.5);
+    line-height: 2em;
+    border: 1px solid #ddd;
+    @include gradient(#fff, #f3f3f3);
+  }
+
+  .hidden-label {
+    position: absolute;
+    left: -1000px;
+  }
+}

@@ -1,0 +1,23 @@
+/*------------------------------------*\
+    _MESSAGE-BAR.SCSS
+\*------------------------------------*/
+.message-bar {
+	display: none;
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	padding: 3rem 3rem;
+	background-color: rgba(223, 232, 52, .95);
+	color: black;
+	text-align: center;
+	font-size: 2rem;
+
+	&.success {
+		background-color: rgba(93, 164, 35, .95);
+	}
+
+	&.error {
+		background-color: rgba(223, 52, 52, .95);
+	}
+}

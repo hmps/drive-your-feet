@@ -1,0 +1,46 @@
+//------------------------------------
+//	_ADMIN.SCSS
+//------------------------------------
+
+.admin {
+	@include arrow(top, right, #fff);
+	display: none;
+	position: absolute;
+	top: 40px;
+	right: 200px;
+	width: 300px;
+	// min-height: 200px;
+	padding: 1em;
+	background-color: #fff;
+	z-index: 1000;
+	box-shadow: 0 0 4px #333;
+	color: #333;
+
+	input[type=text], input[type=password]{
+		background-color: #eee;
+		border: 1px solid #ccc;
+		margin-bottom:1em;
+	}
+
+	input[type=submit] {
+		width: 100%;
+		border-radius: 0;
+	}
+
+	button {
+		width: 99%;
+	}
+}
+
+.login-button {
+	float:right;
+	position: absolute;
+	top: 0px;
+	right: 1em;
+  background-color: $gold;
+  color: darken($deep_purple, 25%);
+
+  @media (min-width: px2em(768px)) {
+  	top: 0.5%;
+  }
+}
