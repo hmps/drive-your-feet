@@ -43,7 +43,14 @@ class DrillController extends BaseController {
 	 */
 	public function store()
 	{
-		//
+		$input = Input::all();
+		$drill = Drill::create(array(
+			'position_id' => $input['position_id'],
+			'title' => $input['title'],
+			'description' => $input['description'],
+			'video' => $input['video']
+		));
+		return $drill;
 	}
 
 	/**
@@ -55,7 +62,7 @@ class DrillController extends BaseController {
 		$query= DB::table('drills')
 								->where('drills.id', '=', $id)
 								->join('positions', 'drills.position_id', '=', 'positions.id')
-								->get(array('drills.*', 'positions.label', 'positions.full_name'));
+								->get(array('drills.*', 'positions.label', 'positions.fullname'));
 		return Response::json($query[0]);
 	}
 

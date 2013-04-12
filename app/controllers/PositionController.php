@@ -10,7 +10,7 @@ class PositionController extends BaseController {
 	public function index()
 	{
 		$query= DB::table('positions')
-								->orderBy('full_name', 'asc')
+								->orderBy('fullname', 'asc')
 								->get();
 		return json_encode($query);
 		//return Position::all()->orderBy('label');

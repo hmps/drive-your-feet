@@ -10,9 +10,11 @@ App.Views.Home = Backbone.View.extend({
 			vent.on('recent:newItem', this.newRecent, this);
 
 			//var filterView = new App.Views.Filters({ collection: App.positions }).render();
-			var mainView = new App.Views.Main();
+			//var mainView = new App.Views.Main();
 			var listView = new App.Views.Drills({ collection: App.drills }).render();
+			var addView = new App.Views.AddVideo({ collection: App.drills }).render();
 			var singleView = new App.Views.SingleDrill();
+			$('#add-video').html( addView.el );
 			$('#main-content').html( listView.el );
 	},
 
@@ -25,12 +27,92 @@ App.Views.Home = Backbone.View.extend({
 });
 
 /*-------------------------------------------------------------------------
-| MAIN VIEW
+| ADD VIDEO VIEW
 |------------------------------------------------------------------------*/
 
-App.Views.Main = Backbone.View.extend({
-	el: '#main-content',
+App.Views.AddVideo = Backbone.View.extend({
+	tagName: 'form',
+	template: '<input type="url" id="video-url" placeholder="Länk till Youtube-video">',
+
+	events: {
+		'submit': 'addVideo'
+	},
+
+	initialize: function () {
+		console.log(this.collection);
+	},
+
+	render: function () {
+		this.$el.html( this.template );
+		return this;
+	},
+
+	parse_link: function (link) {
+    var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/;
+    var match = link.match(regExp);
+    if ( match && 11 === match[7].length ) {
+        return match[7];
+    } else {
+        console.log('Felaktig URL');
+    }
+	},
+
+	addVideo: function (e) {
+		e.preventDefault();
+		var videoId = this.parse_link( $('#video-url', this.el).val() );
+		var detailsView = new App.Views.VideoDetails({ collection: this.collection, data: {'video': videoId}}).render();
+		$('#main-content').html( detailsView.el );
+		$('#video-title').focus();
+		this.clearForm();
+
+	},
+
+	clearForm: function () {
+		$(':input', this.el)
+			.not(':button, :submit, :reset, :hidden')
+			.val('')
+			.removeAttr('checked')
+			.removeAttr('selected');
+	},
+
 });
+
+
+App.Views.VideoDetails = Backbone.View.extend({
+	tagName: 'form',
+	className: 'video-details',
+	id: 'video-details',
+	template: template('addVideoTemplate'),
+
+	events: {
+		'submit': 'addVideo'
+	},
+
+	render: function () {
+		console.log(this.collection);
+		this.$el.html( this.template({'id': this.options.data.video, 'positions': App.positions.models}));
+		return this;
+	},
+
+	addVideo: function (e) {
+		e.preventDefault();
+		if( ! $('#video-url', this.el).val().length ||
+				! $('#video-title', this.el).val().length ||
+				! $('#video-desc', this.el).val().length ) {
+			alert(' Du måste fylla i alla fälten');
+		} else {
+			this.collection.create({
+				position_id: 		$('#video-pos option:selected', this.el).val(),
+				title: 					$('#video-title', this.el).val(),
+				description: 		$('#video-desc', this.el).val(),
+				video: 					$('#video-url', this.el).val()
+			}, {wait:true});
+			console.log('created');
+			console.log(this.collection);
+		}
+	},
+});
+
 /*-------------------------------------------------------------------------
 | VIEW CONTAINING ALL DRILLS
 |------------------------------------------------------------------------*/
@@ -40,13 +122,22 @@ App.Views.Drills = Backbone.View.extend({
 
 	initialize: function () {
 		vent.on('filter:setFilter', this.setFilter, this);
+		this.collection.on('add', this.show, this);
 	},
 
 	render: function () {
 		this.collection.each( function(drill) {
-			this.addOne(drill);
+			this.addOne(drill, false);
 		}, this);
 		return this;
+	},
+
+	show: function () {
+		console.log(this.collection);
+		this.addOne(this)
+		//var drillView = new App.Views.Drill({ model: this.collection.models[0] }).render();
+		// this.$el.prepend(drillView.el);
+		$('#main-content').html(this.el);
 	},
 
 	addOne: function (drill) {

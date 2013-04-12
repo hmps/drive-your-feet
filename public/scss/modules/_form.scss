@@ -1,0 +1,39 @@
+/*------------------------------------*\
+    _FORM.SCSS
+\*------------------------------------*/
+
+input[type=text], input[type=url], textarea {
+	outline: none;
+	border: 1px solid $dark_blue;
+	box-shadow: inset 1px 1px 5px #ccc;
+	line-height: 2em;
+	border-radius: 4px;
+	padding: 2px .5em;
+}
+
+.add-video {
+	margin-bottom: 2em;
+	input[type=url] {
+		width: 300px;
+		@include vendor(transition, all .2s ease-out);
+
+		&:focus {
+			width: 100%;
+		}
+	}
+}
+
+.video-details {
+	margin-top: 2em;
+	label {
+		margin-top: 1em;
+	}
+	input, select, textarea {
+		display: block;
+		width: 100%;
+	}
+
+	input[type=submit] {
+		margin-top: 2em;
+	}
+}

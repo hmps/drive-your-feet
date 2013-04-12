@@ -25,6 +25,7 @@
 				</nav>
 			</div>
 			<div class="grid__item five-sixths portable-one-whole">
+				<section class="add-video" id="add-video"></section>
 				<section id="main-content" role="main"></section>
 			</div>
 		</div>
@@ -49,6 +50,23 @@
 			<div id="fitThis"><iframe width="940" height="529" src="http://www.youtube.com/embed/<%= video %>" frameborder="0" allowfullscreen></iframe></div>
 			<p><%= description %></p>
 		</div>
+	</script>
+
+
+	<script type="text/template" id="addVideoTemplate">
+		<div id="fitThis"><iframe src="http://www.youtube.com/embed/<%= id %>" frameborder="0" allowfullscreen></iframe></div>
+		<input type="hidden" name="video-url" id="video-url" value="<%= id %>">
+		<label for="video-title">Titel</label>
+		<input type="text" id="video-title" name="video-title" placeholder="Titel">
+		<label for="video-pos">Kategori</label>
+		<select name="video-pos" id="video-pos">
+			<% _.each(positions, function(obj) { %>
+			<option value="<%= obj.get('id') %>"><%= obj.get('fullname') %></option>
+			<% }); %>
+		</select>
+		<label for="video-desc">Beskrivning</label>
+		<textarea name="video-desc" id="video-desc" cols="30" rows="5"></textarea>
+		<input type="submit" class="btn btn--large btn--positive" value="Lägg till video">
 	</script>
 
 
