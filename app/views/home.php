@@ -15,7 +15,7 @@
 						<li><a href="#/" class="active">Alla</a></li>
 						<!-- <li><a href="#/favs/">Favoriter</a></li> -->
 						<?php foreach( $positions as $position ): ?>
-						<li><a href="#/tag/<?php echo $position['label']; ?>/"><?php echo $position['full_name']; ?></a></li>
+						<li><a href="#/tag/<?php echo $position['label']; ?>/"><?php echo $position['fullname']; ?></a></li>
 						<?php endforeach; ?>
 					</ul>
 				</nav>
@@ -44,7 +44,7 @@
 		<div class="single-drill-content">
 			<h2><%= title %></h2>
 			<ul class="nav tag-list">
-				<li><span class="pill uppercase"><%=full_name%></span></li>
+				<li><span class="pill uppercase"><%=fullname%></span></li>
 			</ul>
 			<div id="fitThis"><iframe width="940" height="529" src="http://www.youtube.com/embed/<%= video %>" frameborder="0" allowfullscreen></iframe></div>
 			<p><%= description %></p>

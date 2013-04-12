@@ -18,3 +18,5 @@ web1:
   after_deploy:
     - "rm -f app/storage/cache/*"
     - "rm -f app/storage/views/*"
+  before_deploy:
+    - "php artisan db:seed"
