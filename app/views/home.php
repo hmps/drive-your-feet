@@ -36,7 +36,6 @@
 		<div class="drill-content" >
 			<a href="/#/<%=id%>/">
 				<img src="http://img.youtube.com/vi/<%=video%>/mqdefault.jpg" alt="">
-				<!--<h3><span><%=label%></span>: <%= title %></h3>-->
 			</a>
 		</div>
 	</script>

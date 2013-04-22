@@ -12,6 +12,7 @@ class DrillController extends BaseController {
 		if ( isset($_GET['tag']) ) {
 			$query= DB::table('drills')
 								->where('position_id', '=', $_GET['tag'])
+								->orderBy('updated_at', 'desc')
 								->join('positions', 'drills.position_id', '=', 'positions.id')
 								->take(20)
 								->get(array('drills.id', 'drills.title', 'drills.video', 'positions.label'));

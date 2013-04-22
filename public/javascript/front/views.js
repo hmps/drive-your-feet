@@ -89,7 +89,6 @@ App.Views.VideoDetails = Backbone.View.extend({
 	},
 
 	render: function () {
-		console.log(this.collection);
 		this.$el.html( this.template({'id': this.options.data.video, 'positions': App.positions.models}));
 		return this;
 	},
@@ -107,8 +106,6 @@ App.Views.VideoDetails = Backbone.View.extend({
 				description: 		$('#video-desc', this.el).val(),
 				video: 					$('#video-url', this.el).val()
 			}, {wait:true});
-			console.log('created');
-			console.log(this.collection);
 		}
 	},
 });
@@ -127,16 +124,16 @@ App.Views.Drills = Backbone.View.extend({
 
 	render: function () {
 		this.collection.each( function(drill) {
-			this.addOne(drill, false);
+			this.addOne(drill);
 		}, this);
 		return this;
 	},
 
 	show: function () {
-		console.log(this.collection);
-		this.addOne(this)
-		//var drillView = new App.Views.Drill({ model: this.collection.models[0] }).render();
-		// this.$el.prepend(drillView.el);
+		console.log(this.collection.models[this.collection.models.length-1]);
+		//this.addOne(this)
+		var drillView = new App.Views.Drill({ model: this.collection.models[this.collection.models.length-1] }).render();
+		this.$el.prepend(drillView.el);
 		$('#main-content').html(this.el);
 	},
 
