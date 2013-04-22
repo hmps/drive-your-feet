@@ -8,6 +8,8 @@
 
 .grid {
 	padding: 0 $side-padding;
+	max-width: (2*$side-padding)+$grid-width;
+	margin: 1.5em auto;
   letter-spacing: -0.31em; // Whitespace fix
 
   &.l-full-width {
@@ -39,9 +41,6 @@ html {
 }
 
 body {
-	position: relative;
-	max-width: (2*$side-padding)+$grid-width;
-	margin: 1.5em auto;
 	background-color: $body_color;
 	color: #fff;
 	font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;

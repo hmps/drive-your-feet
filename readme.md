@@ -1,13 +1,13 @@
-# Laravel 4 Pagoda Box Quickstart
+# DRIVE YOUR FEET
+Built on the strong shoulders of Laravel 4 and Backbone.js
 
-Provides a Quickstart installation of Laravel 4 including a preconfigured MySQL database, automatic [Composer](http://getcomposer.org) package installation, and Laravel database migrations.
+## En app för coacher
+Det här är tänkt att vara en app för amerikansk fotbollcoacher i Sverige. Till att börja med kommer det bara att vara en enkel sida för att samla instruktionsfilmer från Youtube men med tiden är det tänkt att vi tillsammans ska kunna utveckla detta till ett verktyg som vässar varje coachs arsenal.
 
-## Installation
+## Hjälp oss utveckla!
+Förutom själva utvecklinen - att knacka kod alltså - så behöver vi hjälp med att rapportera buggar, hitta på nya funktioner, sprida ryktet etc. Hör av dig på hampus@hampuspersson.se om du är sugen på att hjälpa till!
 
-You can install the Quickstart either directly from the [Pagoda Box App Cafe](https://pagodabox.com/cafe/briankiewel/laravel-4), as a Quickstart through your Pagoda Box dashboard during the new application creation process, or by cloning the [GitHub repository](https://github.com/briankiewel/pagodabox-laravel-4) and pushing it to an empty Pagoda Box application repository.
-
-## Laravel 4
-
-* [Laravel 4 Documentation](http://four.laravel.com)
-* [Laravel 4 Issues](https://github.com/laravel/framework/issues)
-* **Current Version:** v4.0.0-BETA4 (updated April 9, 2013)
+### Vad kan du göra?
+1. **Rapportera buggar**. Om du klickar på "[Issues](https://github.com/hampuspersson/drive-your-feet/issues "Issues")" i menyn ovanför så kommer du till ett formulär där du kan rapportera om sidan beter sig märkligt.
+2. **Önska funktioner**. Om du har någon idé för vad som skulle kunna göra sidan bättre så får du gärna skicka in även dessa som en buggrapport (se punkt 1 ovan) eller kontakta mig på hampus@hampuspersson.se alternativ [@hampusp](http://www.twitter.com/hampusp "@hampusp på Twitter") på Twitter
+3. **Koda**. Kan du koda PHP eller javascript och är sugen på att hjälpa till? Hör av dig!

@@ -6,6 +6,8 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
 	<body>
+
+		<section class="message">Hjälp oss göra SFN Academy Online bättre!</section>
 		<div class="grid">
 			<div class="grid__item one-sixth portable-one-whole">
 				<header class="site-header"><a href="/" title="Tillbaka till första sidan"><img src="/images/sfn_logo.png" alt="SAFEs logo"></a></header>
