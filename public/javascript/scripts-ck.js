@@ -107,6 +107,10 @@
 		$(this).addClass('active');
 	});
 
+	$('#tour-list').joyride({
+		modal:true
+  });
+
 // OTHER JS
 	$('#fitThis').fitVids();
 
@@ -381,6 +385,7 @@ App.Views.SingleDrill = Backbone.View.extend({
 		$('#main-content').html( this.el );
 		this.renderTags(this.model.get('tags'));
 		vent.trigger('recent:newItem', this.model);
+		$('#fitThis').fitVids();
 		return this;
 	},
 

@@ -1,0 +1,16 @@
+/*------------------------------------*\
+    _MESSAGE.SCSS
+\*------------------------------------*/
+
+.message {
+	width: 100%;
+	text-align: center;
+	padding: .5em 0;
+	font-size: .8em;
+	background: $dark-blue;
+	color: $yellow;
+}
+
+.tour-list {
+	display: none;
+}

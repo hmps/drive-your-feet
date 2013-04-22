@@ -21,6 +21,10 @@
 		$(this).addClass('active');
 	});
 
+	$('#tour-list').joyride({
+		modal:true
+  });
+
 // OTHER JS
 	$('#fitThis').fitVids();
 

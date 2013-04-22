@@ -1150,7 +1150,7 @@ input[type=text], input[type=url], textarea { outline: none; border: 1px solid #
 
 .add-video { margin-bottom: 2em; }
 .add-video input[type=url] { width: 300px; -webkit-transition: all 0.2s ease-out; -moz-transition: all 0.2s ease-out; -ms-transition: all 0.2s ease-out; -o-transition: all 0.2s ease-out; transition: all 0.2s ease-out; }
-.add-video input[type=url]:focus { width: 100%; }
+.add-video input[type=url]:focus { width: 75%; }
 
 .video-details { margin-top: 2em; }
 .video-details label { margin-top: 1em; }
@@ -1159,6 +1159,11 @@ input[type=text], input[type=url], textarea { outline: none; border: 1px solid #
 
 .loading-bar { display: none; margin-top: 2em; text-align: center; }
 
-/*------------------------------------*\ _OVERLAY.SCSS
+.help-btn { background-color: #2f6490; position: absolute; top: 3em; right: 1em; }
+.help-btn:hover, .help-btn:focus { background-color: #254f71; color: #fefe53; }
+
+/*------------------------------------*\ _MESSAGE.SCSS
 \*------------------------------------*/
-.black-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); }
+.message { width: 100%; text-align: center; padding: .5em 0; font-size: .8em; background: #002240; color: #fefe53; }
+
+.tour-list { display: none; }

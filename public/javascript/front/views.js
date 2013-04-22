@@ -208,6 +208,7 @@ App.Views.SingleDrill = Backbone.View.extend({
 		$('#main-content').html( this.el );
 		this.renderTags(this.model.get('tags'));
 		vent.trigger('recent:newItem', this.model);
+		$('#fitThis').fitVids();
 		return this;
 	},
 

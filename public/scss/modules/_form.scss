@@ -18,7 +18,7 @@ input[type=text], input[type=url], textarea {
 		@include vendor(transition, all .2s ease-out);
 
 		&:focus {
-			width: 100%;
+			width: 75%;
 		}
 	}
 }
@@ -42,4 +42,16 @@ input[type=text], input[type=url], textarea {
 	display: none;
 	margin-top: 2em;
 	text-align: center;
+}
+
+.help-btn {
+	background-color: $light-blue;
+	position: absolute;
+	top: 3em;
+	right: 1em;
+
+	&:hover, &:focus {
+		background-color: darken($light-blue, 8%);
+		color: $yellow;
+	}
 }
