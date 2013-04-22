@@ -67,9 +67,9 @@
 		</select>
 		<label for="video-desc">Beskrivning</label>
 		<textarea name="video-desc" id="video-desc" cols="30" rows="5"></textarea>
-		<input type="submit" class="btn btn--large btn--positive" value="Lägg till video">
+		<input type="submit" id="video-submit" class="btn btn--large btn--positive" value="Lägg till video">
+		<div class="loading-bar" id="loading-bar"><img src="/images/loading-bar.gif" alt="Loading..."></div>
 	</script>
-
 
 	<!-- /TEMPLATES -->
 
