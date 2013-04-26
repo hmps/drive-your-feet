@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>SFN Academy - Övningsbibliotek</title>
+		<title>SFN Academy - Coaches</title>
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<link rel="stylesheet" type="text/css" href="css/joyride-2.0.3.css">
 	</head>
