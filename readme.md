@@ -9,5 +9,5 @@ Förutom själva utvecklinen - att knacka kod alltså - så behöver vi hjälp m
 
 ### Vad kan du göra?
 1. **Rapportera buggar**. Om du klickar på "[Issues](https://github.com/hampuspersson/drive-your-feet/issues "Issues")" i menyn ovanför så kommer du till ett formulär där du kan rapportera om sidan beter sig märkligt.
-2. **Önska funktioner**. Om du har någon idé för vad som skulle kunna göra sidan bättre så får du gärna skicka in även dessa som en buggrapport (se punkt 1 ovan) eller kontakta mig på h@hmps.se alternativ [@hmps_ser](http://www.twitter.com/hmps_se "@hmps_se på Twitter") på Twitter
+2. **Önska funktioner**. Om du har någon idé för vad som skulle kunna göra sidan bättre så får du gärna skicka in även dessa som en buggrapport (se punkt 1 ovan) eller kontakta mig på h@hmps.se alternativ [@hmps_se](http://www.twitter.com/hmps_se "@hmps_se på Twitter") på Twitter
 3. **Koda**. Kan du koda PHP eller javascript och är sugen på att hjälpa till? Hör av dig!
